@@ -67,13 +67,13 @@ def compareTvalues(TStat, TCrit):
     if(abs(TStat) > abs(TCrit)):
         lblans.configure(text= "We reject the null hypothesis " + "TStat = " + str(TStat) + " TCrit = " +str(TCrit))
     else:
-         lblans.configure(text= "We fail to reject the null hypothesis "+ "TStat = " + str(TStat) + " TCrit = " +str(TCrit))
+        lblans.configure(text= "We fail to reject the null hypothesis "+ "TStat = " + str(TStat) + " TCrit = " +str(TCrit))
 
 window = tk.Tk()
 
 logo = tk.PhotoImage(file="Ttest.png")
 
-window.title("Single Sample T-Test") 
+window.title("Single Sample T-Test")
 window.geometry('1000x1000')
 
 w1 = tk.Label(window, image=logo)

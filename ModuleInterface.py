@@ -17,6 +17,18 @@
 ##  --> Provides correct solution
 ##Performs other Tests...
 
+##Performs 2 sample mean T Test
+##Given:
+##      Mean
+##      2nd Mean
+##      Null Hypothesis
+##      Standard Deviations
+##      Sample Sizes
+##  --> Computes T-Stat
+##      Confidence Level
+##      Compares T-critcal value with T-stat
+##  --> Provides correct solution
+
 #########################################################################
 #########################################################################
 #########################################################################
