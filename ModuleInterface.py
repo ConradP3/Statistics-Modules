@@ -104,11 +104,10 @@ window = tk.Tk()
 
 window.title("Statistics Modules")
 window.geometry('1000x1000')
+
 stats = tk.PhotoImage(file="Stats.png")
 w1 = tk.Label(window, image=stats)
-w1.grid(column=4, row =0)
-
-
+w1.grid(column=3, row =0)
 
 btn = Button(window,text='Help', command=clicked)
 btn.grid(column=0,row=30)
@@ -131,4 +130,7 @@ btnRegcoeff.grid(column=1, row=8)
 btnAnova = Button(window, text="ANOVA", command=clickedAnova)
 btnAnova.grid(column=1, row=10)
 
+
+lblans = Label(window, text = "Pereira 2020")
+lblans.grid(column=1, row=50)
 window.mainloop()

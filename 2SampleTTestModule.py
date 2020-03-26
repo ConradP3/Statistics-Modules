@@ -64,14 +64,11 @@ def clickedTest():
 
     compareTvalues(TStat, TCrit)
 
-    #ans = TStat
-    #lblans.configure(text= ans)
-
 def compareTvalues(TStat, TCrit):
     if(abs(TStat) > abs(TCrit)):
         lblans.configure(text= "We reject the null hypothesis " + "TStat = " + str(TStat) + " TCrit = " +str(TCrit))
     else:
-         lblans.configure(text= "We fail to reject the null hypothesis "+ "TStat = " + str(TStat) + " TCrit = " +str(TCrit))
+        lblans.configure(text= "We fail to reject the null hypothesis "+ "TStat = " + str(TStat) + " TCrit = " +str(TCrit))
 
 window = tk.Tk()
 
