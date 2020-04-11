@@ -39,14 +39,29 @@ def clickedMeasure():
 
     computeMean(sum, sampleSize)
 
-    # + '  median: ' + str(median) +' mode: '+ str(mode))
 def computeMean(sum, n):
-    #for x in range(n):
-    #    sumTotal=sumtotal+obs[x]
     mean = sum/n
 
     lblMean.configure(text = 'mean: ' + str(mean))
 
+def insertionSort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i-1
+        while j >=0 and key < arr[j] :
+                arr[j+1] = arr[j]
+                j -= 1
+        arr[j+1] = key
+
+def command():
+    print(entry.get().split(" "))
+    List = entry.get().split(" ")
+
+    #Calling insertion sort for enter list
+    insertionSort(List)
+
+    lblList.configure(text = 'Ordered List: ' + str(List))
+    #XXX
 
 window = tk.Tk()
 
@@ -65,6 +80,7 @@ btnMeasures.grid(column=1, row=1)
 txtSum = Entry(window,width=20)
 txtSum.grid(column=1, row = 2)
 
+#Sum of all observations
 lblSum = Label(window, text ="Sum of Observations")
 lblSum.grid(column=0, row=2)
 
@@ -76,6 +92,26 @@ lblSamplesize.grid(column=0, row=3)
 
 lblMean = Label(window, text= '')
 lblMean.grid(column=1,row=20)
+
+#Sample Size N
+lblSamplesize = Label(window, text ="Sample Size")
+lblSamplesize.grid(column=0, row=3)
+
+lblMean = Label(window, text= '')
+lblMean.grid(column=1,row=20)
+
+#List
+entry = Entry(window,width=20)
+entry.grid(column=1, row = 21)
+button = Button(window, text="Print Entries", command=command)
+button.grid(column=1, row =22)
+
+lblBtn = Label(window, text= "Enter Space Seperated List")
+lblBtn.grid(column=0, row = 21)
+
+lblList = Label(window, text= "")
+lblList.grid(column=1, row = 23)
+
 
 
 window.mainloop()
